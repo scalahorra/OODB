@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
+import org.neodatis.odb.Objects;
 
 import modelo.Asignatura;
 import modelo.Centro;
@@ -35,6 +36,8 @@ public class App {
 		
 		do {
 			
+			//Menu
+			System.out.println("");
 			System.out.println("-- Menu --");
 			System.out.println("1. Poblar la BBDD");
 			System.out.println("2. Listar todos los centros");
@@ -50,7 +53,48 @@ public class App {
 			
 			switch(opcion) {
 			
+			//Poblamos la BBDD
 			case 1: 
+				
+				odb.store(centro1);
+				odb.store(centro2);
+
+				odb.store(profesor1);
+				odb.store(profesor2);
+				odb.store(profesor3);
+				
+				odb.store(asignatura1);
+				odb.store(asignatura2);
+				odb.store(asignatura3);
+				odb.store(asignatura4);
+				odb.store(asignatura5);
+				odb.store(asignatura6);
+				odb.store(asignatura7);
+				odb.store(asignatura8);
+				
+				//Creamos los objetos
+				Objects<Centro> centro;
+				Objects<Profesor> profesor; 
+				Objects<Asignatura> asignatura;
+				
+				break;
+				
+			//Listar todos los centros	
+			case 2:
+				
+				centro = odb.getObjects(Centro.class);
+				System.out.println(centro);
+				
+				break;
+				
+			//Listar todos los profesores	
+			case 3:
+				
+				profesor = odb.getObjects(Profesor.class);
+				System.out.println(profesor);
+				break;
+				
+			case 4:
 				
 				
 			}

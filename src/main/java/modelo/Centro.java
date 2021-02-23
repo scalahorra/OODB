@@ -7,7 +7,7 @@ public class Centro {
 	public float codigo;
 	public String nombre;
 	public float director;
-	public String direeccion;
+	public String direccion;
 	public String localidad;
 	public String provincia;
 	public List <Profesor> profesores;
@@ -17,12 +17,12 @@ public class Centro {
 	public Centro() {
 		super();
 	}
-	public Centro(float codigo, String nombre, float director, String direeccion, String localidad, String provincia) {
+	public Centro(float codigo, String nombre, float director, String direccion, String localidad, String provincia) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.director = director;
-		this.direeccion = direeccion;
+		this.direccion = direccion;
 		this.localidad = localidad;
 		this.provincia = provincia;
 	}
@@ -47,11 +47,11 @@ public class Centro {
 	public void setDirector(float director) {
 		this.director = director;
 	}
-	public String getDireeccion() {
-		return direeccion;
+	public String getDireccion() {
+		return direccion;
 	}
-	public void setDireeccion(String direeccion) {
-		this.direeccion = direeccion;
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 	public String getLocalidad() {
 		return localidad;
@@ -70,8 +70,8 @@ public class Centro {
 	//ToString
 	@Override
 	public String toString() {
-		return "Centros [codigo=" + codigo + ", nombre=" + nombre + ", director=" + director + ", direeccion="
-				+ direeccion + ", localidad=" + localidad + ", provincia=" + provincia + "]";
+		return "Centros [codigo=" + codigo + ", nombre=" + nombre + ", director=" + director + ", direccion="
+				+ direccion + ", localidad=" + localidad + ", provincia=" + provincia + "]";
 	}
 	
 	
