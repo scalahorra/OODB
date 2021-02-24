@@ -77,7 +77,7 @@ public class Profesor {
 	@Override
 	public String toString() {
 		return "Profesor [codigo=" + codigo + ", apellidos=" + apellidos + ", nombre=" + nombre + ", fechaNacimiento="
-				+ fechaNacimiento + ", sexo=" + sexo + ", centro=" + centro + ", asignaturas= " + asignaturas + "]";
+				+ fechaNacimiento + ", sexo=" + sexo + ", centro=" + centro + ", asignaturas= " + asignaturas + "]\n";
 	}
 	
 	

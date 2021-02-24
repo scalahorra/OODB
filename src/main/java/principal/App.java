@@ -7,6 +7,8 @@ import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
 import org.neodatis.odb.Objects;
 import org.neodatis.odb.core.query.IQuery;
+import org.neodatis.odb.core.query.criteria.And;
+import org.neodatis.odb.core.query.criteria.ICriterion;
 import org.neodatis.odb.core.query.criteria.Where;
 import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 
@@ -29,7 +31,7 @@ public class App {
 		Asignatura asignatura7 = new Asignatura(7, "Sistemas de Gestion Empresarial");
 		Asignatura asignatura8 = new Asignatura(8, "Tutoria");
 
-		Profesor profesor1 = new Profesor(1, "Sentis", "Carlos", "25/5/2000", "H", 1, Arrays.asList(asignatura2, asignatura5));
+		Profesor profesor1 = new Profesor(1, "Sentis", "Carlos", "25/5/2000", "H", 1, Arrays.asList(asignatura2, asignatura3));
 		Profesor profesor2 = new Profesor(2, "Badia", "Maria", "10/2/2000", "M", 2, Arrays.asList(asignatura3));
 		Profesor profesor3 = new Profesor(3, "Arruego", "Claudia", "18/1/2000", "M", 2, Arrays.asList(asignatura1, asignatura4));
 		
@@ -80,8 +82,9 @@ public class App {
 				//Creamos los objetos
 				Objects<Centro> centro;
 				Objects<Profesor> profesor; 
-				Objects<Asignatura> asignatura;
+				//Objects<Asignatura> asignatura;
 				
+				System.out.println("");
 				System.out.println("Base de Datos poblada correctamente");
 				
 				break;
@@ -111,6 +114,35 @@ public class App {
 					Profesor p = profesorCentro.next();
 					System.out.println(p);
 				}
+				
+				break;
+				
+			//Listar todos los profesores de un centro cuya fecha de nacimiento sea anterior a 1993
+			case 5:
+				
+				break;
+				
+			//Listas los profesores de sexo masculino que impartan la asignatura de "Acceso a Datos"	
+			case 6:
+				
+				ICriterion iCriterion1 = Where.equal("sexo", "H");
+				ICriterion iCriterion2 = Where.contain("asignaturas", "asignatura3");
+				ICriterion iCriterion = new And().add(iCriterion1).add(iCriterion2);
+				IQuery iQuery1 = new CriteriaQuery(Profesor.class, iCriterion);
+				Objects<Profesor> profesorAsignatura = odb.getObjects(iQuery1);
+				
+				while(profesorAsignatura.hasNext()) {
+					Profesor pa = profesorAsignatura.next();
+					System.out.println(pa);
+				}
+				
+				break;
+				
+			//Comprobar que un profesor existe	
+			case 7:
+				
+				
+				break;
 			}
 			
 					

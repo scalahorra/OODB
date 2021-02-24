@@ -75,7 +75,7 @@ public class Centro {
 	@Override
 	public String toString() {
 		return "Centros [codigo=" + codigo + ", nombre=" + nombre + ", director=" + director + ", direccion="
-				+ direccion + ", localidad=" + localidad + ", provincia=" + provincia + "]";
+				+ direccion + ", localidad=" + localidad + ", provincia=" + provincia + "]\n";
 	}
 	
 	
