@@ -17,7 +17,7 @@ public class Centro {
 	public Centro() {
 		super();
 	}
-	public Centro(float codigo, String nombre, float director, String direccion, String localidad, String provincia) {
+	public Centro(float codigo, String nombre, float director, String direccion, String localidad, String provincia, List<Profesor> profesores) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -25,6 +25,7 @@ public class Centro {
 		this.direccion = direccion;
 		this.localidad = localidad;
 		this.provincia = provincia;
+		this.profesores = profesores;
 	}
 	
 	
@@ -64,6 +65,9 @@ public class Centro {
 	}
 	public void setProvincia(String provincia) {
 		this.provincia = provincia;
+	}
+	public List<Profesor> getProfesores() {
+		return profesores;
 	}
 	
 	

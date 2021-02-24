@@ -10,14 +10,15 @@ public class Profesor {
 	public String fechaNacimiento;
 	public String sexo;
 	public float centro;
-	//public List<Asignatura> asignaturas;
+	public List<Asignatura> asignaturas;
 	
 	
 	//Constructores
 	public Profesor() {
 		super();
 	}
-	public Profesor(float codigo, String apellidos, String nombre, String fechaNacimiento, String sexo, float centro) {
+	public Profesor(float codigo, String apellidos, String nombre, String fechaNacimiento, String sexo, float centro
+			, List<Asignatura> asignaturas) {
 		super();
 		this.codigo = codigo;
 		this.apellidos = apellidos;
@@ -25,7 +26,7 @@ public class Profesor {
 		this.fechaNacimiento = fechaNacimiento;
 		this.sexo = sexo;
 		this.centro = centro;
-		//this.asignaturas = asignaturas;
+		this.asignaturas = asignaturas;
 	}
 	
 	
@@ -66,17 +67,17 @@ public class Profesor {
 	public void setCentro(float centro) {
 		this.centro = centro;
 	}
-	/*public List<Asignatura> getAsignaturas() {
+	public List<Asignatura> getAsignaturas() {
 		return asignaturas;
-	}*/
+	}
 
 	
 	
 	//ToString
 	@Override
 	public String toString() {
-		return "Profesores [codigo=" + codigo + ", apellidos=" + apellidos + ", nombre=" + nombre + ", fechaNacimiento="
-				+ fechaNacimiento + ", sexo=" + sexo + ", centro=" + centro + "]";
+		return "Profesor [codigo=" + codigo + ", apellidos=" + apellidos + ", nombre=" + nombre + ", fechaNacimiento="
+				+ fechaNacimiento + ", sexo=" + sexo + ", centro=" + centro + ", asignaturas= " + asignaturas + "]";
 	}
 	
 	
